@@ -52,7 +52,7 @@ const Hero = () => {
           data-aos="zoom-in"
           id="form"
           className={`${
-            darkMode ? "dark bg-gray-800" : "light bg-white"
+            darkMode ? "dark bg-gray-800 " : "light bg-white"
           } lg:w-[70%] w-full m-auto grid lg:grid-cols-4 grid-cols-1 justify-center items-center gap-6 p-8 rounded-xl -mt-14`}
         >
           <div className="w-full">

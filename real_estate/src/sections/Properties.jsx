@@ -136,7 +136,7 @@ const Properties = () => {
                   >
                     <div className="flex justify-center items-center gap-2">
                       <FaUserCircle className="size-5 text-red-400" />
-                      <h2>{item.owner}</h2>
+                      <h2 className="dark:text-white">{item.owner}</h2>
                     </div>
 
                     <div className="flex justify-center items-center gap-4">

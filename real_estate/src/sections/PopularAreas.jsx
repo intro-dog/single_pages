@@ -77,7 +77,7 @@ const PopularAreas = () => {
             <h2 className="text-black text-7xl font-semibold dark:text-white uppercase">
               5k
             </h2>
-            <h2 className="uppercase">
+            <h2 className="dark:text-white uppercase">
               active<br></br>listings
             </h2>
           </div>
@@ -89,7 +89,7 @@ const PopularAreas = () => {
             <h2 className="text-black text-7xl font-semibold dark:text-white uppercase">
               5k
             </h2>
-            <h2 className="uppercase">
+            <h2 className="dark:text-white uppercase">
               active<br></br>listings
             </h2>
           </div>
@@ -101,7 +101,7 @@ const PopularAreas = () => {
             <h2 className="text-black text-7xl font-semibold dark:text-white uppercase">
               5k
             </h2>
-            <h2 className="uppercase">
+            <h2 className="dark:text-white uppercase">
               active<br></br>listings
             </h2>
           </div>

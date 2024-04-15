@@ -5,8 +5,6 @@ import aboutimg from "../assets/images/about.jpg"
 import { useDarkMode } from "../components/DarkModeContext"
 
 const About = () => {
-  const { darkMode, toggleDarkMode } = useDarkMode()
-
   useEffect(() => {
     AOS.init({
       offset: 200,
@@ -15,7 +13,7 @@ const About = () => {
       delay: 100,
     })
   }, [])
-
+  const { darkMode, toggleDarkMode } = useDarkMode()
   return (
     <section
       id="about"
