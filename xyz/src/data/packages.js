@@ -5,8 +5,8 @@ export const packages = [
     yearlyPrice: 199,
     description:
       "A common form of lorem ipsum reads: Lorem impum dolor sit amet, consectetur adipiscing elit.",
-    green: "/public/green.svg",
-    red: "/public/red.svg",
+    green: "/green.svg",
+    red: "/red.svg",
   },
   {
     name: "Advance",
@@ -14,8 +14,8 @@ export const packages = [
     yearlyPrice: 399,
     description:
       "A common form of lorem ipsum reads: Lorem impum dolor sit amet, consectetur adipiscing elit.",
-    green: "/public/green.svg",
-    red: "/public/red.svg",
+    green: "/green.svg",
+    red: "/red.svg",
   },
   {
     name: "Premium",
@@ -23,6 +23,6 @@ export const packages = [
     yearlyPrice: 599,
     description:
       "A common form of lorem ipsum reads: Lorem impum dolor sit amet, consectetur adipiscing elit.",
-    green: "/public/green.svg",
+    green: "/green.svg",
   },
 ]
