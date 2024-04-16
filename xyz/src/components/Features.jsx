@@ -1,11 +1,31 @@
+import AOS from "aos"
+import "aos/dist/aos.css"
+import { motion } from "framer-motion"
+import { useEffect } from "react"
 import featureImg from "../../public/article.png"
 import FeaturesArticle from "../shared/FeaturesArticle"
+import { fadeIn } from "./../data/variants"
 
 const Features = () => {
+  useEffect(() => {
+    AOS.init({
+      offset: 200,
+      duration: 800,
+      easing: "ease-in-sine",
+      delay: 100,
+    })
+  }, [])
+
   return (
-    <div className="my-24 md:px-14 px-4 max-w-screen-2xl mx-auto">
+    <div className="my-24 md:px-14 px-4 max-w-screen-2xl mx-auto" id="feature">
       <div className="flex flex-col lg:flex-row justify-between items-start gap-10">
-        <div className="lg:w-1/4">
+        <motion.div
+          variants={fadeIn("right", 0.2)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.7 }}
+          className="lg:w-1/4"
+        >
           <h3 className="text-3xl text-primary font-bold mb-3">
             Why we are better than others
           </h3>
@@ -16,10 +36,10 @@ const Features = () => {
               the 'topic sentence'.
             </p>
           </div>
-        </div>
+        </motion.div>
 
         {/* features list */}
-        <div className="w-full lg:w-3/4">
+        <div data-aos="fade-up" className="w-full lg:w-3/4">
           <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 items-start md:gap-12 gap-8">
             <FeaturesArticle
               img={featureImg}

@@ -2,6 +2,8 @@ import { useState } from "react"
 import { FaBars } from "react-icons/fa"
 import { FaXmark } from "react-icons/fa6"
 import { GrLanguage } from "react-icons/gr"
+import { Link } from "react-scroll"
+import { navItems } from "../data/navbar"
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -9,25 +11,6 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
   }
-
-  const navItems = [
-    {
-      link: "Overview",
-      path: "home",
-    },
-    {
-      link: "Feature",
-      path: "feature",
-    },
-    {
-      link: "About",
-      path: "about",
-    },
-    {
-      link: "Pricing",
-      path: "pricing",
-    },
-  ]
 
   return (
     <>
@@ -46,10 +29,18 @@ const Navbar = () => {
 
             {/* showing navitem using map */}
             <ul className="md:flex space-x-12 hidden">
-              {navItems.map(({ link, path }) => (
-                <a key={link} href={path} className="block hover:text-gray-300">
+              {navItems.map(({ link, path }, index) => (
+                <Link
+                  activeClass="active"
+                  spy={true}
+                  smooth={true}
+                  offset={-100}
+                  key={index}
+                  to={path}
+                  className="block hover:text-gray-300 cursor-pointer"
+                >
                   {link}
-                </a>
+                </Link>
               ))}
             </ul>
           </div>
@@ -91,10 +82,19 @@ const Navbar = () => {
           isMenuOpen ? "block fixed top-0 right-0 left-0" : "hidden"
         }`}
       >
-        {navItems.map(({ link, path }) => (
-          <a key={link} href={path} className="block hover:text-gray-300">
+        {navItems.map(({ link, path }, index) => (
+          <Link
+            activeClass="active"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            key={index}
+            to={path}
+            className="block hover:text-gray-300 text-white cursor-pointer"
+            onClick={toggleMenu}
+          >
             {link}
-          </a>
+          </Link>
         ))}
       </div>
     </>
