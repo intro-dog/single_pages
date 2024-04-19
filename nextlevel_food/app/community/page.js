@@ -1,6 +1,6 @@
-import communityIcon from "@/public/icons/community.png"
-import eventsIcon from "@/public/icons/events.png"
-import mealIcon from "@/public/icons/meal.png"
+import communityIcon from "@/assets/icons/community.png"
+import eventsIcon from "@/assets/icons/events.png"
+import mealIcon from "@/assets/icons/meal.png"
 import Image from "next/image"
 import styles from "./page.module.css"
 
