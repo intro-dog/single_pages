@@ -1,5 +1,6 @@
 import { getMealsBySlug } from "@/lib/meals"
 import Image from "next/image"
+import { notFound } from "next/navigation"
 import styles from "./page.module.css"
 export default async function MealDetails({ params }) {
   const meal = getMealsBySlug(params.slug)
